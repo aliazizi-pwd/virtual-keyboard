@@ -14,4 +14,6 @@ A mini practice project simulating a virtual keyboard that displays animations f
 </div>
 
 
-# Live Demo 
+
+## Click on the link to run the project online 🧑‍💻
+[Link to the Note application project View online](https://keyboarvirtual.netlify.app/)
