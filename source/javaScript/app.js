@@ -48,24 +48,19 @@ function appendDataKeyboard (event) {
         return
     }
 
-    
+
 
     // append event key to title panel element 
     titleElm.innerHTML += event.key;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
+function changeThemeHandler (event) {
+    let themeBackground = event.target.dataset.background;
+    let themeColor = event.target.dataset.color;
+    document.documentElement.style.setProperty("--backgroundColor-content" , themeBackground);
+    document.documentElement.style.setProperty("--color-content", themeColor);
+}
 
 // -> add event listeners for set animation form the keyboard clicked user
 document.addEventListener("keyup",setAnimationHandler);
+btnChangeTheme.addEventListener("click",changeThemeHandler);
