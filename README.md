@@ -12,3 +12,6 @@ A mini practice project simulating a virtual keyboard that displays animations f
 <div align="center">
   <img src="./public/image/demo-02.PNG" alt="Algorithmic Mind Exercises Logo">
 </div>
+
+
+# Live Demo 
