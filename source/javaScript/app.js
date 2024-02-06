@@ -10,6 +10,9 @@ function setAnimationHandler (event) {
     let eventKeyValue = event.key.toUpperCase();
     let mainKeyElm = $.getElementById(eventKeyValue);
 
+    // append data keyboard to title panel
+    appendDataKeyboard(event);
+
     // add class animation
     mainKeyElm.classList.add("animeActive");
 
@@ -20,8 +23,36 @@ function setAnimationHandler (event) {
     });
 }
 
+// -> function append data keyboard to title panel
+function appendDataKeyboard (event) {
+    // Condition
+    titleElm.innerHTML.length > -1 ? titleElm.classList.remove("title-panel") : titleElm.classList.add("title-panel");
+    // condition's 
+    if (event.key === "Backspace") {
+        titleElm.innerHTML = titleElm.innerHTML.slice(0,-1);
+        return
+    } else if (event.key === "Enter") {
+        event.key = null;
+        return
+    } else if (event.key === "Control") {
+        event.key = null;
+        return
+    } else if (event.key === "CapsLock") {
+        event.key = null;
+        return
+    } else if (event.key === "Tab") {
+        event.key = null;
+        return
+    } else if (event.key === "Escape") {
+        event.key = null;
+        return
+    }
 
+    
 
+    // append event key to title panel element 
+    titleElm.innerHTML += event.key;
+}
 
 
 
