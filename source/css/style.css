@@ -9,6 +9,7 @@
     --backgroundColor-content : #000000;
     --color-content : #ffffff;
     --backgroundColor-Title : #dc143c;
+    --background-animation : #dc143c;
 }
 body {
   background-color: var(--backgroundColor-content);
@@ -65,6 +66,7 @@ li {
   font-size: 1em;
   font-weight: bold;
   background-color: var(--color-content);
+  border: 2px solid #cccccc;
 }
 #TAB {
   width: 5em;
@@ -83,4 +85,19 @@ li {
 }
 #ENTER {
   width: 6em;
+}
+.animeActive {
+    animation: activeKey 320ms ease-in alternate;
+}
+@keyframes activeKey {
+    form {
+        opacity: 0.7;
+        transform: scale(1.0);
+        background-color: var(--color-content);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1.1);
+        background-color: var(--background-animation);
+    }
 }
